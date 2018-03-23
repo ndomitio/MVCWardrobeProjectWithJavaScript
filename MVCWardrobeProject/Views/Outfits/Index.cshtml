@@ -1,0 +1,197 @@
+﻿@model IEnumerable<MVCWardrobeProject.Outfit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<link href="~/OutfitsStyleSheet.css" rel="stylesheet" />
+<h2>Outfits</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+<!DOCTYPE html>
+<html class="menu">
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content= ="IE=edge" />
+    <meta name="google" value="notranslate" />
+    <title>Side Menu</title>
+
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="main-menu">
+        <div>
+            <a class="logo" href="http://startific.com">
+            </a>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        @*<div class="settings"></div>*@
+        <div class="scrollbar" id="style-1">
+
+            <ul>
+
+                <li>
+                    <a href="@Url.Action("Index", "Home")">
+                        <i class="fa fa-home fa-lg"></i>
+                        <span class="nav-text">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="@Url.Action("Create", "Outfits")">
+                        <i class="fa fa-plus fa-lg"></i>
+                        <span class="nav-text">Create</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "Tops")">
+                        <i class="fa fa-tumblr fa-lg"></i>
+                        <span class="nav-text">Tops</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="@Url.Action("Index", "Bottoms")">
+                        <i class="fa fa-bold fa-lg"></i>
+                        <span class="nav-text">Bottoms</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="@Url.Action("Index", "Accessories")">
+                        <i class="fa fa-adn fa-lg"></i>
+                        <span class="nav-text">Accessories</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="@Url.Action("Index", "Shoes")">
+                        <i class="fa fa-strikethrough"></i>
+                        <span class="nav-text">Shoes</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+</body>
+</html>
+
+@foreach (var item in Model)
+{
+
+    <div class="w3-container" style="color:gray!important; margin-top:15vh;">
+        <h1>Outfits</h1>
+
+        <div class="w3-card-4" style="width:50%; margin-left:25%; margin-right:25%;margin-top:10%;">
+            <header class="w3-container">
+                <h1>@Html.DisplayFor(modelItem => item.Top.TopName)</h1>
+            </header>
+
+            <div class="w3-container">
+                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" />
+            </div>
+            <header class="w3-container">
+                <h1>@Html.DisplayFor(modelItem => item.Bottom.BottomName)</h1>
+            </header>
+
+            <div class="w3-container">
+                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
+            </div>
+            <header class="w3-container">
+                <h1>@Html.DisplayFor(modelItem => item.Shoe.ShoeName)</h1>
+            </header>
+
+            <div class="w3-container">
+                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
+            </div>
+            <header class="w3-container">
+                <h1>@Html.DisplayFor(modelItem => item.Accessory.AccessoryName)</h1>
+            </header>
+
+            <div class="w3-container">
+                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
+            </div>
+            <p style="margin-top:5%;">
+                @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.OutfitID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID })
+            </p>
+
+        </div>
+    </div>
+}
+    @*@foreach (var item in Model)
+    {
+
+<div class='slider' style="margin:30px;">
+    <div class='slide1'>
+        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
+    </div>
+    <div class='slide2'>
+        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" />
+    </div>
+    <div class='slide3'>
+        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" />
+    </div>
+    <div class='slide4'>
+        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
+    </div>
+</div>
+    }*@
+    @*<table class="table" style="margin-left: 4vw;margin-top:35vh">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Accessory.AccessoryPhoto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bottom.BottomPhoto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Shoe.ShoePhoto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Top.TopPhoto)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img style="width:100px;" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
+                    </td>
+                    <td>
+                        <img style="width:100px;" src="@Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" />
+                    </td>
+                    <td>
+                        <img style="width:100px;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
+                    </td>
+                    <td>
+                        <img style="width:100px;" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" />
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.OutfitID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID })
+                    </td>
+                </tr>
+            }
+
+        </table>*@
