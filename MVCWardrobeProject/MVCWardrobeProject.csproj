@@ -201,6 +201,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\3collage.jpg" />
     <Content Include="Content\images\aldorain.jpg" />
+    <Content Include="Content\images\blackpant.jpg" />
+    <Content Include="Content\images\blackshoe.jpg" />
     <Content Include="Content\images\blacksuit.jpg" />
     <Content Include="Content\images\blacktie.jpg" />
     <Content Include="Content\images\blue shorts.jpg" />
@@ -215,9 +217,11 @@
     <Content Include="Content\images\KBblackandwhite.png" />
     <Content Include="Content\images\kbjacket.jpg" />
     <Content Include="Content\images\kbpants.jpg" />
+    <Content Include="Content\images\KBquote.jpg" />
     <Content Include="Content\images\KBshoe.jpg" />
     <Content Include="Content\images\KBsketch.jpg" />
     <Content Include="Content\images\Kill-Bill.jpg" />
+    <Content Include="Content\images\LDquote.jpg" />
     <Content Include="Content\images\mensjean.jpg" />
     <Content Include="Content\images\mensjean2.png" />
     <Content Include="Content\images\menswhiteshoe.jpg" />
@@ -235,7 +239,9 @@
     <Content Include="Content\images\rsz_kbblackandwhite.png" />
     <Content Include="Content\images\samuel L.png" />
     <Content Include="Content\images\sandal.jpg" />
+    <Content Include="Content\images\SBquote.jpg" />
     <Content Include="Content\images\silver.jpg" />
+    <Content Include="Content\images\SJburger.jpg" />
     <Content Include="Content\images\suedejacket.jpg" />
     <Content Include="Content\images\sword.jpg" />
     <Content Include="Content\images\Tarantino+Movies.jpg" />
@@ -284,6 +290,7 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="OutfitsStyleSheet.css" />
+    <Content Include="Content\Project10JavaScript.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

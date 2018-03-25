@@ -20,10 +20,10 @@
 <head>
 
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content= ="IE=edge" />
-    <meta name="google" value="notranslate" />
+    @*<meta http-equiv="X-UA-Compatible" content= ="IE=edge" />*@
+    @*<meta name="google" value="notranslate" />*@
     <title>Side Menu</title>
-
+    <script src="~/Content/Project10JavaScript.js"></script>
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
@@ -89,109 +89,273 @@
         </div>
     </nav>
 
-</body>
-</html>
-
-@foreach (var item in Model)
-{
-
-    <div class="w3-container" style="color:gray!important; margin-top:15vh;">
-        <h1>Outfits</h1>
-
-        <div class="w3-card-4" style="width:50%; margin-left:25%; margin-right:25%;margin-top:10%;">
-            <header class="w3-container">
-                <h1>@Html.DisplayFor(modelItem => item.Top.TopName)</h1>
-            </header>
-
-            <div class="w3-container">
-                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" />
-            </div>
-            <header class="w3-container">
-                <h1>@Html.DisplayFor(modelItem => item.Bottom.BottomName)</h1>
-            </header>
-
-            <div class="w3-container">
-                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
-            </div>
-            <header class="w3-container">
-                <h1>@Html.DisplayFor(modelItem => item.Shoe.ShoeName)</h1>
-            </header>
-
-            <div class="w3-container">
-                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
-            </div>
-            <header class="w3-container">
-                <h1>@Html.DisplayFor(modelItem => item.Accessory.AccessoryName)</h1>
-            </header>
-
-            <div class="w3-container">
-                <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
-            </div>
-            <p style="margin-top:5%;">
-                @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.OutfitID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID })
-            </p>
-
-        </div>
+    @*I have clothing items from multiple movies.  I want to display a prompt box and have the user select
+        a movie.  From the movie selection I want to display the clothes from that movie.*@
+    <div id="movielist" width="400" height="400">
     </div>
-}
-    @*@foreach (var item in Model)
-    {
 
-<div class='slider' style="margin:30px;">
-    <div class='slide1'>
-        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
+    <div id="menulist">
+        <select onchange="selectMovie(this.value);">
+            <option value="0" selected="selected">Select Movie</option>
+            <option value="1">Pulp Fiction</option>
+            <option value="2">Kill Bill</option>
+            <option value="3">Django Unchained</option>
+            <option value="4">Reservoir Dogs</option>
+        </select>
     </div>
-    <div class='slide2'>
-        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" />
-    </div>
-    <div class='slide3'>
-        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" />
-    </div>
-    <div class='slide4'>
-        <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
-    </div>
-</div>
-    }*@
-    @*<table class="table" style="margin-left: 4vw;margin-top:35vh">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Accessory.AccessoryPhoto)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Bottom.BottomPhoto)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Shoe.ShoePhoto)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Top.TopPhoto)
-                </th>
-                <th></th>
-            </tr>
+
+    <div class="row" id="outfitorig" display="none" style="justify-content:center; flex-direction:column;">
+        <div class=""></div>
+        <div class="" style="justify-content:space-around;">
+
+            @*<button id="button1" type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('outfitorig', 'killbill', 'pulpfiction', 'DU', 'rdogs')">Change Movie!</button>*@
+
 
             @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        <img style="width:100px;" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
-                    </td>
-                    <td>
-                        <img style="width:100px;" src="@Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" />
-                    </td>
-                    <td>
-                        <img style="width:100px;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
-                    </td>
-                    <td>
-                        <img style="width:100px;" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" />
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.OutfitID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID })
-                    </td>
-                </tr>
-            }
+    {
+        if (item.Top.TopName == "Yellow Jacket")
+        {
 
-        </table>*@
+            <h1 style="margin-top:10vh">
+                As seen in:
+            </h1><button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="Redirect();">Kill Bill</button>
+            <output name="result" id="confirmResponse"></output>
+
+}
+if ((item.Top.TopName == "Suede jacket") || (item.Top.TopName == "Black suit coat") || (item.Top.TopName == "White Dress Shirt") || (item.Top.TopName == "UC Santa Cruz T-Shirt") || (item.Top.TopName == "White T-Shirt"))
+{
+        <h1 style="margin-top:10vh">As seen in: </h1><button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="Redirect();">Pulp Fiction</button>
+        <output name="result" id="confirmResponse"></output>
+}
+        <div class="w3-container" style="color:gray!important; margin-top:0vh;">
+
+            <div class="w3-card-4" style="width:50%; margin-left:25%; margin-right:25%;margin-top:5%;">
+                <header class="w3-container">
+                    <h1>@Html.DisplayFor(modelItem => item.Top.TopName)</h1>
+                </header>
+
+                <div class="w3-container">
+                    <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" />
+                </div>
+                <header class="w3-container">
+                    <h1>@Html.DisplayFor(modelItem => item.Bottom.BottomName)</h1>
+                </header>
+
+                <div class="w3-container">
+                    <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" />
+                </div>
+                <header class="w3-container">
+                    <h1>@Html.DisplayFor(modelItem => item.Shoe.ShoeName)</h1>
+                </header>
+
+                <div class="w3-container">
+                    <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
+                </div>
+                <header class="w3-container">
+                    <h1>@Html.DisplayFor(modelItem => item.Accessory.AccessoryName)</h1>
+                </header>
+
+                <div class="w3-container">
+                    <img style="width:25vw; height:30vh;" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
+                </div>
+                <p style="margin-top:5%;">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.OutfitID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID })
+                </p>
+
+            </div>
+        </div>
+}
+        </div>
+    </div>
+
+
+    @*<div class="row" id="killbill" display="none" style="justify-content:center; flex-direction:column;">
+            <div class=""></div>
+            <div class="" style="justify-content:space-around;">
+                <button id="button1" type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('outfitorig', 'killbill', 'pulpfiction', 'DU', 'rdogs')">Change Movie!</button>
+
+                <h1> Kill Bill Collection</h1>
+                <div class="w3-container" style="color:gray!important; margin-top:0vh;">
+
+                    <div class="w3-card-4" style="width:50%; margin-left:25%; margin-right:25%;margin-top:5%;">
+                        <header class="w3-container">
+                            <h1>Yellow Jacket</h1>
+                        </header>
+
+                        <div class="w3-container">
+
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbjacket.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Yellow pants</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbpants.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Yellow Aasics</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbshoe.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Samurai Sword</h1>
+                        </header>
+
+                        <div class="w3-container" style="margin-bottom:5%;">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/sword.jpg" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row" id="pulpfiction" display="none" style="justify-content:center; flex-direction:column;">
+            <div class=""></div>
+            <div class="" style="justify-content:space-around;">
+                <button id="button1" type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('outfitorig', 'killbill', 'pulpfiction', 'DU', 'rdogs')">Change Movie!</button>
+
+                <h1> Pulp Fiction Collection</h1>
+                <div class="w3-container" style="color:gray!important; margin-top:0vh;">
+
+                    <div class="w3-card-4" style="width:50%; margin-left:25%; margin-right:25%;margin-top:5%;">
+                        <header class="w3-container">
+                            <h1>Yellow Jacket</h1>
+                        </header>
+
+                        <div class="w3-container">
+
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbjacket.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Yellow pants</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbpants.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Yellow Aasics</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbshoe.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Samurai Sword</h1>
+                        </header>
+
+                        <div class="w3-container" style="margin-bottom:5%;">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/sword.jpg" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row" id="DU" display="none" style="justify-content:center; flex-direction:column;">
+            <div class=""></div>
+            <div class="" style="justify-content:space-around;">
+                <button id="button1" type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('outfitorig', 'killbill', 'pulpfiction', 'DU', 'rdogs')">Change Movie!</button>
+
+                <h1> Django Unchained Collection</h1>
+                <div class="w3-container" style="color:gray!important; margin-top:0vh;">
+
+                    <div class="w3-card-4" style="width:50%; margin-left:25%; margin-right:25%;margin-top:5%;">
+                        <header class="w3-container">
+                            <h1>Yellow Jacket</h1>
+                        </header>
+
+                        <div class="w3-container">
+
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbjacket.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Yellow pants</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbpants.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Yellow Aasics</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbshoe.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Samurai Sword</h1>
+                        </header>
+
+                        <div class="w3-container" style="margin-bottom:5%;">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/sword.jpg" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row" id="rdogs" display="none" style="justify-content:center; flex-direction:column;">
+            <div class=""></div>
+            <div class="" style="justify-content:space-around;">
+                <button id="button1" type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('outfitorig', 'killbill', 'pulpfiction', 'DU', 'rdogs')">Change Movie!</button>
+
+                <h1> Reservoir Dogs Collection</h1>
+                <div class="w3-container" style="color:gray!important; margin-top:0vh;">
+
+                    <div class="w3-card-4" style="width:50%; margin-left:25%; margin-right:25%;margin-top:5%;">
+                        <header class="w3-container">
+                            <h1>Yellow Jacket</h1>
+                        </header>
+
+                        <div class="w3-container">
+
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbjacket.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Yellow pants</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbpants.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Yellow Aasics</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/kbshoe.jpg" />
+                        </div>
+                        <header class="w3-container">
+                            <h1>Samurai Sword</h1>
+                        </header>
+
+                        <div class="w3-container" style="margin-bottom:5%;">
+                            <img style="width:25vw; height:30vh;" src="/Content/images/sword.jpg" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+</body>
+</html>

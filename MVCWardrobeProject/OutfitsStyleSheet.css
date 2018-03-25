@@ -1,130 +1,38 @@
-﻿/*styling for cards*/
+﻿/*drop down image styling*/
 
-.slider {
-    max-width: 22vw;
-    height: 14.7vh;
-    margin: 1.5vh auto;
-    position: relative;
+img {
+    height: 300px;
+    width: 300px;
+}
+/*text from drop down*/
+input,select,textarea{
+    color:black;
 }
 
-.slide1, .slide2, .slide3, .slide4, .slide5 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
 
-.slide1 {
-    background: url(http://media.dunkedcdn.com/assets/prod/40946/580x0-9_cropped_1371566801_p17tbs0rrjqdt1u4dnk94fe4b63.jpg)no-repeat center;
-    background-size: cover;
-    animation: fade 12s infinite;
-    -webkit-animation: fade 12s infinite;
-}
 
-.slide2 {
-    background: url(http://media.dunkedcdn.com/assets/prod/40946/580x0-9_cropped_1371565525_p17tbqpu0d69c21hetd77dh483.jpeg)no-repeat center;
-    background-size: cover;
-    animation: fade2 12s infinite;
-    -webkit-animation: fade2 12s infinite;
-}
 
-.slide3 {
-    background-size: cover;
-    animation: fade3 12s infinite;
-    -webkit-animation: fade3 12s infinite;
-}
-
-.slide4 {
-    background-size: cover;
-    animation: fade4 12s infinite;
-    -webkit-animation: fade4 12s infinite;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0
-    }
-
-    25% {
-        opacity: 0
-    }
-
-    50% {
-        opacity: 0
-    }
-
-    75% {
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1
-    }
-}
-
-@keyframes fade2 {
-    0% {
-        opacity: 0
-    }
-
-    25% {
-        opacity: 1
-    }
-
-    50% {
-        opacity: 0
-    }
-
-    75% {
-        opacity: 0
-    }
-
-    100% {
-        opacity: 0
-    }
-}
-
-@keyframes fade3 {
-    0% {
-        opacity: 0
-    }
-
-    25% {
-        opacity: 0
-    }
-
-    50% {
-        opacity: 1
-    }
-
-    75% {
-        opacity: 0
-    }
-
-    100% {
-        opacity: 0
-    }
-}
-
-@keyframes fade4 {
-    0% {
-        opacity: 0
-    }
-
-    25% {
-        opacity: 0
-    }
-
-    50% {
-        opacity: 0
-    }
-
-    75% {
-        opacity: 1
-    }
-
-    100% {
-        opacity: 0
-    }
+.btn {
+ 
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 
