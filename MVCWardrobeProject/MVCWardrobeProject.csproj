@@ -194,12 +194,12 @@
     <Content Include="AboutStyle.css" />
     <Content Include="AccessoryDetailsStyleSheet.css" />
     <Content Include="AccessoryStyleSheet.css" />
-    <Content Include="blue325.jpg" />
-    <Content Include="bolo325.jpg" />
-    <Content Include="boot325.jpg" />
+    <Content Include="Content\blue325.jpg" />
+    <Content Include="Content\images\bolo325.jpg" />
+    <Content Include="Content\boot325.jpg" />
     <Content Include="BottomDetailsStyle.css" />
     <Content Include="Bottoms.css" />
-    <Content Include="bshoe325.jpg" />
+    <Content Include="Content\images\bshoe325.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -289,11 +289,11 @@
     <Content Include="Content\images\whiteT.jpg" />
     <Content Include="Content\images\White_dress.jpg" />
     <Content Include="Content\images\JT325.jpg" />
-    <Content Include="Content\patch325.jpg" />
+    <Content Include="Content\images\patch325.jpg" />
     <Content Include="Content\PF325.jpg" />
-    <Content Include="cwbg.jpg" />
-    <Content Include="django325.jpg" />
-    <Content Include="favicon.ico" />
+    <Content Include="Content\cwbg.jpg" />
+    <Content Include="Content\images\django325.jpg" />
+    <Content Include="Content\favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -313,8 +313,8 @@
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="Home.css" />
-    <Content Include="HtmlPage1.html" />
-    <Content Include="kb325.jpg" />
+    <Content Include="Content\HtmlPage1.html" />
+    <Content Include="Content\kb325.jpg" />
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
@@ -330,15 +330,15 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="nurse2325.jpg" />
-    <Content Include="nurse325.gif" />
+    <Content Include="Content\nurse2325.jpg" />
+    <Content Include="Content\nurse325.gif" />
     <Content Include="OutfitsStyleSheet.css" />
     <Content Include="Content\Project10JavaScript.js" />
-    <Content Include="patch325.jpg" />
-    <Content Include="qt2325.jpg" />
-    <Content Include="RD325.jpg" />
-    <Content Include="rdshoe325.jpg" />
-    <Content Include="rsz_qt2325.jpg" />
+    <Content Include="Content\patch325.jpg" />
+    <Content Include="Content\qt2325.jpg" />
+    <Content Include="Content\RD325.jpg" />
+    <Content Include="Content\rdshoe325.jpg" />
+    <Content Include="Content\rsz_qt2325.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -357,10 +357,10 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="ShoeDetailsStyle.css" />
     <Content Include="ShoesStyleSheet.css" />
-    <Content Include="smoking325.gif" />
-    <Content Include="sunglasses325.gif" />
-    <Content Include="sword325.jpg" />
-    <Content Include="tie325.jpg" />
+    <Content Include="Content\smoking325.gif" />
+    <Content Include="Content\sunglasses325.gif" />
+    <Content Include="Content\sword325.jpg" />
+    <Content Include="Content\tie325.jpg" />
     <Content Include="TopDetailsStyle.css" />
     <Content Include="TopsIndex.css" />
     <Content Include="Views\Home\butchjean325.jpg" />
@@ -410,7 +410,7 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="Content\packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
