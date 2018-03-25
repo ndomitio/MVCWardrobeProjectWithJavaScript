@@ -20,7 +20,7 @@
     background-color: #11557E;
 }
 
-
+/*styling for the filter cards*/
 .filterDiv {
     float: left;
     background-color: black;
@@ -58,3 +58,32 @@
         background-color: #666;
         color: white;
     }
+
+
+    /*styling for the hover overlay*/
+
+.container {
+    position: relative;
+    width: 150px;
+    height:150px;
+}
+
+
+.image {
+    
+    width: 150px;
+    height: 150px;
+}
+
+.overlay {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
