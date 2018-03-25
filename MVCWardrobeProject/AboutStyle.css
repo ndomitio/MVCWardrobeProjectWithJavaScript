@@ -1,25 +1,4 @@
-﻿body, html {
-    height: 100%;
-}
-
-.parallax {
-    /* The image used */
-    background-image: url('Content/images/h8bg.jpeg');
-    /* Full height */
-    height: 600px;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#body {
-    height: 1000px;
-    color: #BFD2D9;
-    background-color: #11557E;
-}
-
+﻿
 /*styling for the filter cards*/
 .filterDiv {
     float: left;
@@ -38,7 +17,7 @@
 
 .container {
     margin-top: 20px;
-    overflow: hidden;
+   
 }
 
 /* Style the buttons */
@@ -60,128 +39,138 @@
     }
 
 
-    /*styling for the hover overlay*/
+/*styling for better overlay*/
 
 .container {
+    clear: both;
+    margin: 0 auto;
+    max-width: 1050px;
+}
+
+.filterDiv {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+    float: left;
     position: relative;
-    width: 25%;
-    height:150px;
-}
-
-
-.image {
-    
-    width: 150px;
-    height: 150px;
-}
-
-.overlay {
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-}
-
-.container:hover .overlay {
-    opacity: 1;
-}
-
-
-
-
-
-/*styling for better overlay*/
-#boximage {
-    background-size:cover; height:150px; width:150px;
-}
-
-.container .title {
-    color: #1a1a1a;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.content {
-    position: relative;
-    width: 90%;
-    max-width: 150px;
-    margin: auto;
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
-    .content .content-overlay {
-        background: rgba(0,0,0,0.7);
-        position: absolute;
-        height: 99%;
-        width: 100%;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
+    .filterDiv p {
         opacity: 0;
-        -webkit-transition: all 0.4s ease-in-out 0s;
-        -moz-transition: all 0.4s ease-in-out 0s;
-        transition: all 0.4s ease-in-out 0s;
+        transition: .2s;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-transform: uppercase;
+        margin: 0;
+        text-align: center;
+        line-height: 200px;
+        font-size:10px;
+        display:flex;
+        justify-content:center;
     }
 
-    .content:hover .content-overlay {
-        opacity: 1;
+    .filterDiv:after, .filterDiv:before {
+        opacity: 0;
+        transition: .2s;
+        content: "";
+        background-image: inherit;
+        background-size: inherit;
+        background-position: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-filter: blur(90px) saturate(4);
+        filter: blur(90px) saturate(4);
     }
 
-.content-image {
-    width: 100%;
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .filterDiv:after, .filterDiv:before {
+        background-image: none;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
 }
 
-.content-details {
-    position: absolute;
-    text-align: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    width: 100%;
-    /*top: 50%;
-    left: 50%;*/
-    opacity: 0;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.content:hover .content-details {
-    top: 50%;
-    left: 50%;
+.filterDiv:hover p, .filterDiv:hover:after, .filterDiv:hover:before {
     opacity: 1;
 }
 
-.content-details h3 {
-    color: #fff;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    margin-bottom: 0.5em;
-    text-transform: uppercase;
+.hover .filterDiv p, .hover .filterDiv:after, .hover .filterDiv:before {
+    opacity: 1;
 }
 
-.content-details p {
-    color: #fff;
-    font-size: 0.8em;
+#whiteshirt {
+    background-image: url('Content/images/MM325.jpg');
 }
-
-.fadeIn-bottom {
-    top: 80%;
+#blackcoat {
+    background-image: url('Content/images/VVJW325.jpeg');
 }
-
-.fadeIn-top {
-    top: 20%;
+#yellowjacket {
+    background-image: url('Content/images/KBjacket325.jpg');
 }
-
-.fadeIn-left {
-    left: 20%;
+#suedejacket {
+    background-image: url('Content/images/butch325.jpg');
 }
-
-.fadeIn-right {
-    left: 80%;
+#UCshirt {
+    background-image: url('Content/images/UC325.jpg');
+}
+#whiteshirt {
+    background-image: url('Content/images/butcht325.jpg');
+}
+#bluesuit {
+    background-image: url('Content/images/bluesuit.jpg');
+}
+#blazer {
+    background-image: url('Content/images/leo325.jpg');
+}
+#whitecoat {
+    background-image: url('Content/images/nurse325.gif');
+}
+#nurse {
+    background-image: url('Content/images/nurse2325.jpg');
+}
+#yellowpants {
+    background-image: url('Content/images/KBpant325.jpg');
+}
+#mensjeans {
+    background-image: url('Content/images/butchjean325.jpg');
+}
+#blueshorts {
+    background-image: url('Content/images/blue325.jpg');
+}
+#blackpants {
+    background-image: url('Content/images/RD325.jpg');
+}
+#yellowshoe {
+    background-image: url('Content/images/kb325.jpg');
+}
+#whiteshoe {
+    background-image: url('Content/images/butchjean325.jpg');
+}
+#blackshoe {
+}
+# {
+}
+# {
+}
+# {
+}
+# {
+}
+# {
+}
+# {
+}
+# {
+}
+# {
+}
+# {
 }

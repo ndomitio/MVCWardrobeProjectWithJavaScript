@@ -99,3 +99,13 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
+
+
+
+//styling for hexcards hover
+
+$(".hover").mouseleave(
+    function () {
+        $(this).removeClass("hover");
+    }
+);
