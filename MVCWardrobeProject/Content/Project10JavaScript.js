@@ -16,10 +16,11 @@ function Redirect(x) {
     var displayContainer = document.getElementById('confirmResponse');
     var displayMessage = '';
     var myArray = [
-        "img src=/Content/images/ LDquote.jpg", "<img src=/Content/images/ LDquote.jpg >"
-        //"Apples",
-        //"Bananas",
-        //"Pears"
+        "That is a tasty burger",
+        "Le Royale with Cheese",
+        "Revenge is a dish best served cold",
+        "Django, the D is silent",
+        "Are you gonna bark all day little doggy, or are you gonna bite"
     ];
 
     var randomItem = myArray[Math.floor(Math.random() * myArray.length)];
