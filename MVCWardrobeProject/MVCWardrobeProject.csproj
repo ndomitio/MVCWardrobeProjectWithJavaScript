@@ -195,6 +195,8 @@
     <Content Include="AccessoryDetailsStyleSheet.css" />
     <Content Include="AccessoryStyleSheet.css" />
     <Content Include="blue325.jpg" />
+    <Content Include="bolo325.jpg" />
+    <Content Include="boot325.jpg" />
     <Content Include="BottomDetailsStyle.css" />
     <Content Include="Bottoms.css" />
     <Content Include="bshoe325.jpg" />
@@ -213,6 +215,7 @@
     <Content Include="Content\images\blue325.jpg" />
     <Content Include="Content\images\bluesuit.jpg" />
     <Content Include="Content\images\bolo.jpg" />
+    <Content Include="Content\images\boot325.jpg" />
     <Content Include="Content\images\boots.jpg" />
     <Content Include="Content\images\butch325.jpg" />
     <Content Include="Content\images\butchjean325.jpg" />
@@ -257,10 +260,12 @@
     <Content Include="Content\images\pfbg.jpg" />
     <Content Include="Content\images\pulp-fiction-dance.png" />
     <Content Include="Content\images\pulpgiphy.gif" />
+    <Content Include="Content\images\QT325.jpg" />
     <Content Include="Content\images\quentin.jpeg" />
     <Content Include="Content\images\RD325.jpg" />
     <Content Include="Content\images\RDbg.jpg" />
     <Content Include="Content\images\RDbg2.jpg" />
+    <Content Include="Content\images\rdshoe325.jpg" />
     <Content Include="Content\images\rsz_blacksuit.jpg" />
     <Content Include="Content\images\rsz_kbblackandwhite.png" />
     <Content Include="Content\images\samuel L.png" />
@@ -286,6 +291,7 @@
     <Content Include="Content\patch325.jpg" />
     <Content Include="Content\PF325.jpg" />
     <Content Include="cwbg.jpg" />
+    <Content Include="django325.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -328,7 +334,10 @@
     <Content Include="OutfitsStyleSheet.css" />
     <Content Include="Content\Project10JavaScript.js" />
     <Content Include="patch325.jpg" />
+    <Content Include="qt2325.jpg" />
     <Content Include="RD325.jpg" />
+    <Content Include="rdshoe325.jpg" />
+    <Content Include="rsz_qt2325.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -347,9 +356,14 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="ShoeDetailsStyle.css" />
     <Content Include="ShoesStyleSheet.css" />
+    <Content Include="smoking325.gif" />
+    <Content Include="sunglasses325.gif" />
+    <Content Include="sword325.jpg" />
+    <Content Include="tie325.jpg" />
     <Content Include="TopDetailsStyle.css" />
     <Content Include="TopsIndex.css" />
     <Content Include="Views\Home\butchjean325.jpg" />
+    <Content Include="Views\Home\rsz_qt2325.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,4 +1,90 @@
-﻿
+﻿@font-face {
+    font-family: 'BenguiatStd-Bold';
+    src: url('Content/BenguiatStd-Bold.otf') format('opentype');
+}
+body {
+    font-family: 'BenguiatStd-Bold';
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('rsz_qt2325.jpg');
+    font-family: 'BenguiatStd-Bold';
+}
+
+/*title styling*/
+
+.logo {
+    margin-bottom: 25px;
+    font: 65px 'BenguiatStd-Bold';
+    ; /* I picked this font because it's the closest looking 'web safe' font http://cssfontstack.com/ */
+    color: #fefefe;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+}
+
+    /* stuff for both words */
+    .logo span {
+        position: relative;
+    }
+
+        .logo span:before,
+        .logo span:after {
+            content: '';
+            position: absolute;
+            border-width: 32px; /* makes a nice, big 64px square */
+            border-style: solid;
+            border-color: transparent;
+            height: 0;
+            z-index: 10;
+        }
+
+    /* stuff for 1st word */
+    .logo .word1 {
+        color: #dc006c;
+        margin-right: -38px;
+        transform: rotateY(180deg); /* using Prefix free */
+        display: inline-block; /* required for transform */
+        z-index: 10; /* stack 1st word on top */
+    }
+
+        .logo .word1:before {
+            right: -4px; /* would be left, but we flipped the word */
+            top: -9px;
+            border-top-color: #282828; /* match background color */
+            border-right-color: #282828; /* would be left, but we flipped the word */
+        }
+
+        .logo .word1:after {
+            left: 17px; /* would be right, but we flipped the word */
+            bottom: -15px;
+            border-bottom-color: #282828;
+            border-left-color: #282828; /* would be right, but we flipped the word */
+        }
+
+    /* stuff for 2nd word */
+    .logo .word2 {
+        z-index: 0; /* stack 2nd word below */
+    }
+
+        .logo .word2:before {
+            left: -4px;
+            top: -6px;
+            border-top-color: #282828;
+            border-left-color: #282828;
+        }
+
+        .logo .word2:after {
+            right: -4px;
+            bottom: 4px;
+            border-bottom-color: #282828;
+            border-right-color: #282828;
+        }
+
+
+
+
+
 /*styling for the filter cards*/
 .filterDiv {
     float: left;
@@ -16,7 +102,9 @@
 }
 
 .container {
-    margin-top: 20px;
+   
+float:left;
+margin-top: 20px;
    
 }
 
@@ -70,7 +158,7 @@
         margin: 0;
         text-align: center;
         line-height: 200px;
-        font-size:10px;
+        font-size:15px;
         display:flex;
         justify-content:center;
     }
@@ -155,22 +243,32 @@
     background-image: url('Content/images/butchjean325.jpg');
 }
 #blackshoe {
+    background-image: url('Content/images/rdshoe325.jpg');
 }
-# {
+#boot {
+    background-image: url('Content/images/boot325.jpg');
 }
-# {
+#nurseshoe {
+    background-image: url('Content/images/nurseshoe.jpg');
 }
-# {
+#sunglasses {
+    background-image: url('sunglasses325.gif');
 }
-# {
+#bolo {
+    background-image: url('bolo325.jpg');
 }
-# {
+#eyepatch {
+    background-image: url('patch325.jpg');
 }
-# {
+#cowboyhat {
+    background-image: url('django325.jpg');
 }
-# {
+#blacktie {
+    background-image: url('tie325.jpg');
 }
-# {
+#sword {
+    background-image: url('sword325.jpg');
 }
-# {
+#cigarette {
+    background-image: url('smoking325.gif');
 }

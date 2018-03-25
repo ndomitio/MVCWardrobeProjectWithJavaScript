@@ -109,3 +109,14 @@ $(".hover").mouseleave(
         $(this).removeClass("hover");
     }
 );
+
+//styling for footer hover
+
+function overFtrBtn(x) {
+    
+    x.innerText = "Created by Nick Domitio"
+}
+
+function outFtrBtn(x) {
+    
+}
