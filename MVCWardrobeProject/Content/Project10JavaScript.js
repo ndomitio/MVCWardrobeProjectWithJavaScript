@@ -41,7 +41,7 @@ function selectMovie(inobj) {
             document.getElementById("movielist").innerHTML = "<p id='display2'><big><b>Choose a movie</b></big></p>";
             break;
         case "1":
-            document.getElementById("movielist").innerHTML = "<img src=/Content/images/3collage.jpg />";
+            document.getElementById("movielist").innerHTML = "<img src=/Content/images/3collage.jpg />"
             break;
         case "2":
             document.getElementById("movielist").innerHTML = "<img src=/Content/images/KBquote.jpg>"
