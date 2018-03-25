@@ -120,3 +120,13 @@ function overFtrBtn(x) {
 function outFtrBtn(x) {
     
 }
+
+
+//styling for hw effect
+function myHWFunction() {
+    var x = document.getElementById("myInput");
+
+    document.getElementById("demo").innerHTML = "Here is the HW requirement";
+
+
+}
