@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
+    <script src="~/Content/Project10JavaScript.js"></script>
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body onload="myFunction()" style="margin:0;">
+<body onload="myLoadFunction()" style="margin:0;">
 
     <div id="loader">
 
-        @*<div class="loading">
+        <div class="loading">
             <div class="loading-text">
                 <span class="loading-text-words">L</span>
                 <span class="loading-text-words">O</span>
@@ -21,7 +22,7 @@
                 <span class="loading-text-words">N</span>
                 <span class="loading-text-words">G</span>
             </div>
-        </div>*@
+        </div>
     </div>
     <div>
         @RenderBody()
@@ -34,14 +35,6 @@
     <script>
         var myVar;
 
-        function myFunction() {
-            myVar = setTimeout(showPage, 3000);
-        }
-
-        function showPage() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("myDiv").style.display = "none";
-        }
     </script>
 
 

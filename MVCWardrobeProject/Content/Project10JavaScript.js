@@ -1,4 +1,15 @@
-﻿//styling for button
+﻿//styling for page loader
+
+function myLoadFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "none";
+}
+
+//styling for button
 function overBtn(x) {
     x.style.fontSize = "20px";
     x.style.backgroundColor = "white";
