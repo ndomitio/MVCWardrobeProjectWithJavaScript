@@ -198,8 +198,8 @@ margin-top: 20px;
     opacity: 1;
 }
 
-#whiteshirt {
-    background-image: url('Content/images/MM325.jpg');
+#whitedressshirt {
+    background-image: url('Content/images/PF325.jpg');
 }
 #blackcoat {
     background-image: url('Content/images/VVJW325.jpeg');
@@ -256,23 +256,25 @@ margin-top: 20px;
     background-image: url('Content/images/nurseshoe.jpg');
 }
 #sunglasses {
-    background-image: url('sunglasses325.gif');
+    background-image: url('Content/sunglasses325.gif');
 }
 #bolo {
-    background-image: url('bolo325.jpg');
+    background-image: url('Content/images/bolo325.jpg');
 }
 #eyepatch {
-    background-image: url('patch325.jpg');
+    background-image: url('Content/patch325.jpg');
 }
 #cowboyhat {
-    background-image: url('django325.jpg');
+    background-image: url('Content/images/django325.jpg');
 }
 #blacktie {
-    background-image: url('tie325.jpg');
+    background-image: url('Content/images/RD325.jpg');
 }
 #sword {
-    background-image: url('sword325.jpg');
+    
+    background-image: url('Content/sword325.jpg');
 }
 #cigarette {
-    background-image: url('smoking325.gif');
+    background-image: url('Content/smoking325.gif');
+    
 }
